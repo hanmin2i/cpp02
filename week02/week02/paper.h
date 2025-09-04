@@ -5,7 +5,7 @@ using namespace std;
 class Paper {
 private:
 	string tree;
-	
+
 public:
 	Paper();
 	Paper(string tree);

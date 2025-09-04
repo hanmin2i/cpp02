@@ -1,39 +1,39 @@
-ï»¿/**************************************************************
- * Invoice í´ë˜ìŠ¤ì˜ êµ¬í˜„ íŒŒì¼                                 *
+/**************************************************************
+ * Invoice Å¬·¡½ºÀÇ ±¸Çö ÆÄÀÏ                                 *
  **************************************************************/
 #include "invoice.h"
 
-// ìƒì„±ì  ì–´ê·¸ë¦¬ê²Œì´ì…˜ì€ ê°ì²´ ìì²´ë¥¼ ë°›ìŒ
-//Invoice::Invoice(int invoiceNumber,Company company)//aggregation
-                               //ì»´í¬ì§€ì…˜ì€ ê·¸ëƒ¥ ë¬¸ìì—´ì„ ë°›ì•„ì˜´ invoiceì•ˆìª½ì—ì„œ ìƒì„±
+ // »ı¼ºÀÚ  ¾î±×¸®°ÔÀÌ¼ÇÀº °´Ã¼ ÀÚÃ¼¸¦ ¹ŞÀ½
+ //Invoice::Invoice(int invoiceNumber,Company company)//aggregation
+								//ÄÄÆ÷Áö¼ÇÀº ±×³É ¹®ÀÚ¿­À» ¹Ş¾Æ¿È invoice¾ÈÂÊ¿¡¼­ »ı¼º
 Invoice::Invoice(int invoiceNumber, string name, string telephone, Name name1)
-:  invoiceNumber(invoiceNumber), invoiceTotal(0.0) , company(name,telephone), name1(name1)//invoiceì˜ í¬í•¨ëœ company ê°ì²´
-{                                                        //ë§¤ê²Œë³€ìˆ˜ëŠ” ì´ˆê¸°í™” ë¦¬ìŠ¤íŠ¸ë¡œ ì´ˆê¸°í™”
-	cout << "ë¯¸ã…£ì†Œã…‘ã…œã…" << endl;
+	: invoiceNumber(invoiceNumber), invoiceTotal(0.0), company(name, telephone), name1(name1)//invoiceÀÇ Æ÷ÇÔµÈ company °´Ã¼
+{                                                        //¸Å°Ôº¯¼ö´Â ÃÊ±âÈ­ ¸®½ºÆ®·Î ÃÊ±âÈ­
+	cout << "¹Ì¤Ó¼Ò¤Á¤Ì¤¾" << endl;
 }
-// ì†Œë©¸ì
-Invoice::~Invoice() 
+// ¼Ò¸êÀÚ
+Invoice::~Invoice()
 {
 }
-// add ë©¤ë²„ í•¨ìˆ˜
+// add ¸â¹ö ÇÔ¼ö
 void Invoice::add(int quantity, Product product)
 {
-  invoiceTotal += quantity * product.getPrice();
-  cout << "í¬ë¡œë•íŠ¸:"<<endl;
+	invoiceTotal += quantity * product.getPrice();
+	cout << "Æ÷·Î´öÆ®:" << endl;
 }
-// print ë©¤ë²„ í•¨ìˆ˜
+// print ¸â¹ö ÇÔ¼ö
 //void Invoice::print(Company company) 
 void Invoice::print(Date date) const
-{           
+{
 	Paper::print1();
 
 	date.print();//use-a
-	
+
 	name1.print();//aggregation
-	
+
 	company.print();//composition
-	
+
 	/*company.print();*/
-   cout << "ì²­êµ¬ ë²ˆí˜¸: " << invoiceNumber << endl;
-   cout << "ì²­êµ¬ ê¸ˆì•¡: " << invoiceTotal << endl;
+	cout << "Ã»±¸ ¹øÈ£: " << invoiceNumber << endl;
+	cout << "Ã»±¸ ±İ¾×: " << invoiceTotal << endl;
 }

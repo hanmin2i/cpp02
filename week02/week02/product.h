@@ -1,5 +1,5 @@
-ï»¿/**************************************************************
- * Product í´ë˜ìŠ¤ì˜ ì¸í„°í˜ì´ìŠ¤ íŒŒì¼                           *
+/**************************************************************
+ * Product Å¬·¡½ºÀÇ ÀÎÅÍÆäÀÌ½º ÆÄÀÏ                           *
  **************************************************************/
 #ifndef PRODUCT_H
 #define PRODUCT_H
@@ -9,12 +9,12 @@ using namespace std;
 
 class Product
 {
-  private:
+private:
     string name;
     double unitPrice;
-  public: 
-    Product(string name, double unitPrice);   
-   ~Product(); 
-   double getPrice() const; 
+public:
+    Product(string name, double unitPrice);
+    ~Product();
+    double getPrice() const;
 };
 #endif

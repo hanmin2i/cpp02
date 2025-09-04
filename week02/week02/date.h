@@ -1,5 +1,5 @@
-ï»¿/**************************************************************
- * Date í´ë˜ìŠ¤ì˜ ì¸í„°í˜ì´ìŠ¤ íŒŒì¼                              *
+/**************************************************************
+ * Date Å¬·¡½ºÀÇ ÀÎÅÍÆäÀÌ½º ÆÄÀÏ                              *
  **************************************************************/
 #ifndef DATE_H
 #define DATE_H
@@ -7,15 +7,15 @@
 #include <cassert>
 using namespace std;
 
-class Date  
-{  
-  private:  
-    int month;  
+class Date
+{
+private:
+    int month;
     int day;
     int year;
-  public:  
-    Date(int year, int month, int day);               
-    ~Date();                                                        
-    void print() const;                                          
+public:
+    Date(int year, int month, int day);
+    ~Date();
+    void print() const;
 };
 #endif

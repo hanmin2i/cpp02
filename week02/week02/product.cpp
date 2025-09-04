@@ -1,19 +1,19 @@
-ï»¿/**************************************************************
- * Product í´ë˜ìŠ¤ì˜ êµ¬í˜„ íŒŒì¼                                 *
+/**************************************************************
+ * Product Å¬·¡½ºÀÇ ±¸Çö ÆÄÀÏ                                 *
  **************************************************************/
 #include "product.h"
 
-// ìƒì„±ì
+ // »ı¼ºÀÚ
 Product::Product(string name, double unitPrice)
-: name(name), unitPrice(unitPrice)
+	: name(name), unitPrice(unitPrice)
 {
 }
-// ì†Œë©¸ì
+// ¼Ò¸êÀÚ
 Product::~Product()
 {
-} 
-// getPrice ë©¤ë²„ í•¨ìˆ˜
+}
+// getPrice ¸â¹ö ÇÔ¼ö
 double Product::getPrice() const
 {
-  return unitPrice;
+	return unitPrice;
 }

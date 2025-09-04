@@ -1,36 +1,36 @@
-ï»¿
+
 #include "date.h"
-  
-// ë§¤ê°œë³€ìˆ˜ê°€ ìˆëŠ” ìƒì„±ì                                                                                                                                           
+
+// ¸Å°³º¯¼ö°¡ ÀÖ´Â »ı¼ºÀÚ                                                                                                                                           
 Date::Date(int year, int month, int day)
-: month(month), day(day), year(year)
+    : month(month), day(day), year(year)
 {
-  if((month < 1) ||(month > 12))
-  {
-    cout << "ë‹¬ì˜ ë²”ìœ„ë¥¼ ë²—ì–´ë‚¬ìŠµë‹ˆë‹¤ ";
-    assert(false);
-  }                       // ì›”ì€ 1ë¶€í„° ì‹œì‘ 
-  int daysInMonths[13] = {0, 31, 28, 31, 30, 31, 30, 31, 
-                           31, 30, 31, 30 ,31};
-  if((day < 1) ||(day > daysInMonths [month]))
-  {
-    cout << "í•´ë‹¹ ì›”ì˜ ë‚ ì§œë¥¼ ë²—ì–´ë‚¬ìŠµë‹ˆë‹¤! ";
-    assert(false);
-  }
-  if((year < 1900) ||(year > 2099))
-  {
-    cout << "ì—°ë„ì˜ ë²”ìœ„ë¥¼ ë²—ì–´ë‚¬ìŠµë‹ˆë‹¤! " ;
-    assert(false);
-  }
-  cout << "use-a " << endl;
+    if ((month < 1) || (month > 12))
+    {
+        cout << "´ŞÀÇ ¹üÀ§¸¦ ¹ş¾î³µ½À´Ï´Ù ";
+        assert(false);
+    }                       // ¿ùÀº 1ºÎÅÍ ½ÃÀÛ 
+    int daysInMonths[13] = { 0, 31, 28, 31, 30, 31, 30, 31,
+                             31, 30, 31, 30 ,31 };
+    if ((day < 1) || (day > daysInMonths[month]))
+    {
+        cout << "ÇØ´ç ¿ùÀÇ ³¯Â¥¸¦ ¹ş¾î³µ½À´Ï´Ù! ";
+        assert(false);
+    }
+    if ((year < 1900) || (year > 2099))
+    {
+        cout << "¿¬µµÀÇ ¹üÀ§¸¦ ¹ş¾î³µ½À´Ï´Ù! ";
+        assert(false);
+    }
+    cout << "use-a " << endl;
 }
-// ì†Œë©¸ì                                                  
+// ¼Ò¸êÀÚ                                                  
 Date::~Date()
 {
 }
-// print ë©¤ë²„ í•¨ìˆ˜                                                    
-void Date::print() const 
+// print ¸â¹ö ÇÔ¼ö                                                    
+void Date::print() const
 {
-  cout << year << "ë…„" << month <<  "ì›”" << day << "ì¼" << endl;
-  cout << "use-a " << endl;
+    cout << year << "³â" << month << "¿ù" << day << "ÀÏ" << endl;
+    cout << "use-a " << endl;
 }

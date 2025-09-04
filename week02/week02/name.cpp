@@ -1,21 +1,21 @@
-ï»¿/**************************************************************
- * Name í´ë˜ìŠ¤ì˜ êµ¬í˜„ íŒŒì¼                                    *
+/**************************************************************
+ * Name Å¬·¡½ºÀÇ ±¸Çö ÆÄÀÏ                                    *
  **************************************************************/
 #include "name.h"
 
-// ìƒì„±ì
+ // »ı¼ºÀÚ
 Name::Name(string last, string first)
-:last(last), first(first)
+	:last(last), first(first)
 {
 	cout << "aggregation" << endl;
 }
-// ì†Œë©¸ì
+// ¼Ò¸êÀÚ
 Name::~Name()
 {
 }
-// print ë©¤ë²„ í•¨ìˆ˜
+// print ¸â¹ö ÇÔ¼ö
 void Name::print() const
 {
-  cout << "ì§ì› ì´ë¦„: " << last << " " << first << endl;
-  cout << "aggregation" << endl;
+	cout << "Á÷¿ø ÀÌ¸§: " << last << " " << first << endl;
+	cout << "aggregation" << endl;
 }

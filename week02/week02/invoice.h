@@ -1,5 +1,5 @@
-ï»¿/**************************************************************
- * Invoice í´ë˜ìŠ¤ì˜ ì¸í„°í˜ì´ìŠ¤ íŒŒì¼                           *
+/**************************************************************
+ * Invoice Å¬·¡½ºÀÇ ÀÎÅÍÆäÀÌ½º ÆÄÀÏ                           *
  **************************************************************/
 #ifndef INVOICE_H
 #define INVOICE_H
@@ -11,22 +11,22 @@
 
 class Invoice : public Paper
 {
-    // Productë¥¼ ë©¤ë²„ í•„ë“œë¡œ ê°€ì§€ê³  ìˆì§€ ì•ŠìŒ
-  private:
+    // Product¸¦ ¸â¹ö ÇÊµå·Î °¡Áö°í ÀÖÁö ¾ÊÀ½
+private:
     int invoiceNumber;
-    double invoiceTotal; 
+    double invoiceTotal;
     Company company;
-    Name name1; // has-aê´€ê³„ë¼ ë©¤ë²„ë³€ìˆ˜ë¥¼ ë§Œë“¤ì–´ì¤Œ
-   /* Date date;*/ //use-aëŠ” ë©¤ë²„ë³€ìˆ˜ í•„ìš”X
-  public: 
+    Name name1; // has-a°ü°è¶ó ¸â¹öº¯¼ö¸¦ ¸¸µé¾îÁÜ
+    /* Date date;*/ //use-a´Â ¸â¹öº¯¼ö ÇÊ¿äX
+public:
 
     //Invoice(int invoiceNumber);// aggregation X
     //Invoice(int invoiceNumber, Company company);// aggregation O
     Invoice(int invoiceNumber, string name, string telephone, Name name1); // composition
-    ~Invoice();     
+    ~Invoice();
     void add(int quantity, Product product); // use-a
     /*void print() const; */
-    void print(Date date) const; //use-aë¼ ë§¤ê²Œë³€ìˆ˜ë¡œ ì‚¬ìš©
+    void print(Date date) const; //use-a¶ó ¸Å°Ôº¯¼ö·Î »ç¿ë
     /*void print(Company company);*/
 };
 #endif
